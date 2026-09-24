@@ -1,0 +1,14 @@
+{
+  "name": "lan-transfer",
+  "version": "1.0.0",
+  "description": "局域网多设备文件传输与聊天工具",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.0.2",
+    "ws": "^8.18.0"
+  }
+}

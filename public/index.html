@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title data-i18n="app_title">局域网传输</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo" data-i18n="app_logo">📡 局域网传输</span>
+        <div class="header-actions">
+          <button id="btn-lang" class="icon-btn" data-i18n="lang_switch">EN</button>
+          <span id="conn-status" class="status-dot" data-i18n-title="conn_status"></span>
+        </div>
+      </div>
+
+      <div class="device-list" id="device-list"></div>
+
+      <div class="sidebar-footer">
+        <label for="device-name" data-i18n="device_name_label">我的设备名</label>
+        <input id="device-name" type="text" maxlength="50" data-i18n-placeholder="device_name_placeholder" placeholder="未命名设备" />
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main">
+      <header class="chat-header">
+        <button id="btn-menu" class="icon-btn menu-btn" data-i18n-title="menu">☰</button>
+        <span id="chat-title">所有人</span>
+        <span id="chat-sub" class="chat-sub"></span>
+      </header>
+
+      <div class="messages" id="messages"></div>
+
+      <div class="drop-hint" id="drop-hint" data-i18n="drop_hint">松开以发送文件</div>
+
+      <div class="composer">
+        <textarea id="input" rows="1" data-i18n-placeholder="input_placeholder" placeholder="输入消息…（Enter 发送，Shift+Enter 换行）"></textarea>
+        <div class="composer-actions">
+          <button id="btn-file" class="btn" data-i18n="btn_file" data-i18n-title="btn_file_title">📎 文件</button>
+          <button id="btn-clip" class="btn" data-i18n="btn_clip" data-i18n-title="btn_clip_title">📋 剪贴板</button>
+          <button id="btn-send" class="btn primary" data-i18n="btn_send">发送</button>
+        </div>
+      </div>
+
+      <input type="file" id="file-input" multiple hidden />
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
